@@ -7,7 +7,7 @@
 
 # Features
 
-#### Linux "ps" command output appearance simulated.
+#### Linux "ps" command output appearance is simulated.
 #### Shows detailed information about processes.
 #### AutoKill (Terminate selected background services constantly)
 #### App Widget (for starting autokill service)
