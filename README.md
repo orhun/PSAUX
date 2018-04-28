@@ -1,7 +1,7 @@
 # PSAUX
 ### Android [linux] task manager and automated background service killer.
 
-<img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/psaux1.png' width='400' height='400'/>
+<img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/psaux1.png' width='300' height='300'/>
 
 <img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/example_phone.png' width='335' height='679'/>
 
