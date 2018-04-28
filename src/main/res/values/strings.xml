@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PS-Aux</string>
+    <string name="signalSent">SIGNAL_KILL sent to process: </string>
+    <string name="processKilled">Process killed successfully: </string>
+    <string name="killProcess">Kill Process</string>
+    <string name="processInfo">Process Info</string>
+    <string name="autoKillSet">AutoKill set: </string>
+    <string name="psCommandArgs">PS Command Args.</string>
+    <string name="autoKillSettings">AutoKill Settings</string>
+    <string name="settings">Settings</string>
+    <string name="unstableWarning">Changing settings may result in working unstable.</string>
+    <string name="noSettingsFound">No settings found.</string>
+    <string name="searchHint">Search process name or id</string>
+    <string name="autoKill">AutoKill</string>
+    <string name="psCommandArguments">PS Command Arguments</string>
+    <string name="t_arg">show threads</string>
+    <string name="x_arg">shows time (user time and system time in seconds)</string>
+    <string name="p_arg">show priorities</string>
+    <string name="c_arg">show CPU (may not be available prior to Android 4.x) involved</string>
+    <string name="USER">User:</string>
+    <string name="NAME">Name:</string>
+    <string name="kill">Kill</string>
+    <string name="copied">Copied.</string>
+</resources>

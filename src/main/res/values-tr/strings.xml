@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PS-Aux</string>
+    <string name="NAME">İsim:</string>
+    <string name="USER">Kullanıcı:</string>
+    <string name="autoKill">AutoKill</string>
+    <string name="autoKillSet">AutoKill ayarlandı:</string>
+    <string name="autoKillSettings">AutoKill Ayarları</string>
+    <string name="c_arg">CPU kullanımını göster (Android 4.x+)</string>
+    <string name="copied">Kopyalandı.</string>
+    <string name="kill">Sonlandır</string>
+    <string name="killProcess">İşlemi Sonlandır</string>
+    <string name="noSettingsFound">Ayar bulunamadı.</string>
+    <string name="p_arg">Özellikleri göster.</string>
+    <string name="processInfo">İşlem Bilgileri</string>
+    <string name="processKilled">İşlem sonlandırıldı:</string>
+    <string name="psCommandArgs">\"PS\" Parametreleri</string>
+    <string name="psCommandArguments">PS Komutu Parametreleri</string>
+    <string name="searchHint">İşlem ismi veya id ara</string>
+    <string name="settings">Ayarlar</string>
+    <string name="signalSent">Sonlandırma sinyali gönderildi:</string>
+    <string name="t_arg">Thread\'leri göster</string>
+    <string name="unstableWarning">Bu ayarları değiştirmek uygulamanın stabil çalışmamasına neden olabilir.</string>
+    <string name="x_arg">Zamanı göster</string>
+</resources>
