@@ -20,7 +20,7 @@ public class ProcDB extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVer, int newVer){
         try {
-            db.execSQL("DROP TABLE IF EXIST " + tableName);
+            db.execSQL("DROP TABLE IF EXISTS " + tableName);
             onCreate(db);
         }catch(Exception e){e.printStackTrace();}
     }
