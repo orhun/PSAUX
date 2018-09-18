@@ -44,6 +44,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -322,6 +323,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
+            Collections.reverse(processes);
             processAdapterRec = new ProcessAdapter(getApplicationContext(), processes, new ProcessAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(CProcess item, final int i) {
