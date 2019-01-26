@@ -1,4 +1,10 @@
 # PSAUX
+<a href="https://github.com/KeyLo99/PSAUX/issues"><img src="https://img.shields.io/github/issues/KeyLo99/PSAUX.svg"/></a>
+<a href="https://github.com/KeyLo99/PSAUX/pulls"><img src="https://img.shields.io/github/issues-pr/KeyLo99/PSAUX.svg"/></a>
+<a href="https://github.com/KeyLo99/PSAUX/stargazers"><img src="https://img.shields.io/github/stars/KeyLo99/PSAUX.svg"/></a>
+<a href="https://github.com/KeyLo99/PSAUX/network"><img src="https://img.shields.io/github/forks/KeyLo99/PSAUX.svg"/></a>
+<a href="https://github.com/KeyLo99/PSAUX/blob/master/LICENSE"><img src="https://img.shields.io/github/license/KeyLo99/PSAUX.svg"/></a>
+  
 ### Android [linux] task manager and automated background service killer.
 
 <img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/psaux1.png' width='300' height='300'/>
