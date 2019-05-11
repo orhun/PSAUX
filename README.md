@@ -1,4 +1,5 @@
-# PSAUX
+# PSAUX  <a href="https://github.com/KeyLo99/PSAUX/releases"><img src="https://img.shields.io/github/release/KeyLo99/PSAUX.svg"/>
+</a>
 <a href="https://github.com/KeyLo99/PSAUX/issues"><img src="https://img.shields.io/github/issues/KeyLo99/PSAUX.svg"/></a>
 <a href="https://github.com/KeyLo99/PSAUX/pulls"><img src="https://img.shields.io/github/issues-pr/KeyLo99/PSAUX.svg"/></a>
 <a href="https://github.com/KeyLo99/PSAUX/stargazers"><img src="https://img.shields.io/github/stars/KeyLo99/PSAUX.svg"/></a>
