@@ -11,10 +11,22 @@
 
 <img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/example_phone.png' width='335' height='679'/>
 
-# Features
+## Features
 
-#### Linux "ps" command output appearance is simulated.
-#### Shows detailed information about processes.
-#### AutoKill (Terminate selected background services constantly)
-#### App Widget (for starting autokill service)
-#### Selectable "ps" command arguments.
+* Linux "ps" command output appearance is simulated.
+* Shows detailed information about processes.
+* AutoKill (Terminate selected background services constantly)
+* App Widget (for starting autokill service)
+* Selectable "ps" command arguments.
+
+## APK
+
+[Download APK](https://github.com/KeyLo99/APKs/raw/master/psaux-v1.5.apk)
+
+## License
+
+GNU General Public License v3. (see [gpl](https://www.gnu.org/licenses/gpl.txt))
+
+## Credit
+
+Copyright (C) 2019 by KeyLo99 https://www.github.com/KeyLo99
