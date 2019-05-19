@@ -1,3 +1,5 @@
+<img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/psaux1.png' width='300' height='300'/>
+
 # PSAUX  <a href="https://github.com/KeyLo99/PSAUX/releases"><img src="https://img.shields.io/github/release/KeyLo99/PSAUX.svg"/>
 </a>
 <a href="https://github.com/KeyLo99/PSAUX/issues"><img src="https://img.shields.io/github/issues/KeyLo99/PSAUX.svg"/></a>
@@ -5,12 +7,12 @@
 <a href="https://github.com/KeyLo99/PSAUX/stargazers"><img src="https://img.shields.io/github/stars/KeyLo99/PSAUX.svg"/></a>
 <a href="https://github.com/KeyLo99/PSAUX/network"><img src="https://img.shields.io/github/forks/KeyLo99/PSAUX.svg"/></a>
 <a href="https://github.com/KeyLo99/PSAUX/blob/master/LICENSE"><img src="https://img.shields.io/github/license/KeyLo99/PSAUX.svg"/></a>
-
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-     alt="Get it on Google Play"
-     height="80">](https://play.google.com/store/apps/details?id=com.tht.psaux)
      
 ### Android task manager and automated background service killer.
+ 
+ [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="80">](https://play.google.com/store/apps/details?id=com.tht.psaux)
      
 <img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/example_phone.png' width='335' height='679'/>
 
