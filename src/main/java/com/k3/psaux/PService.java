@@ -1,4 +1,4 @@
-package com.tht.psaux;
+package com.k3.psaux;
 
 import android.app.Service;
 import android.content.Intent;

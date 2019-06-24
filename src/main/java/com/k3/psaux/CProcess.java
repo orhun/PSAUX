@@ -1,4 +1,4 @@
-package com.tht.psaux;
+package com.k3.psaux;
 public class CProcess {
     private String USER, WCHAN, PC, NAME, PPID, USERSALT, CPU;
     private int PID, VSIZE, RSS, PPIDSALT;

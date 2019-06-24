@@ -1,4 +1,4 @@
-package com.tht.psaux;
+package com.k3.psaux;
 
 import android.app.ActivityManager;
 import android.content.Context;

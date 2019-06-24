@@ -1,4 +1,4 @@
-package com.tht.psaux;
+package com.k3.psaux;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
