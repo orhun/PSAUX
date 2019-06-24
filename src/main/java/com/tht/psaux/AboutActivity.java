@@ -15,23 +15,21 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
-    private Context context;
-    private ViewGroup viewGroup;
     private static String version = "1.0",
             k3pwn = "http://www.k3pwn.me";
     // ** //
     private TextView txvK3pwn, txvProjectInfo;
     private void init(){
-        txvK3pwn = viewGroup.findViewById(R.id.txvK3pwn);
-        txvProjectInfo = viewGroup.findViewById(R.id.txvProjectInfo);
+        txvK3pwn = (TextView) findViewById(R.id.txvK3pwn);
+        txvProjectInfo = (TextView)findViewById(R.id.txvProjectInfo);
         try {
-            PackageManager manager = context.getPackageManager();
-            PackageInfo info = manager.getPackageInfo(context.getPackageName(), 0);
+            PackageManager manager = getPackageManager();
+            PackageInfo info = manager.getPackageInfo(getPackageName(), 0);
             version = info.versionName;
         }catch (Exception e){
             e.printStackTrace();
         }
-        txvProjectInfo.setText(context.getString(R.string.app_name) + " v" + version);
+        txvProjectInfo.setText(getString(R.string.app_name) + " v" + version);
         txvK3pwn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
