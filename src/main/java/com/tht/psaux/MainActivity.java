@@ -252,40 +252,44 @@ public class MainActivity extends AppCompatActivity {
             String cmdResult = new CmdExec().executeCommand(CmdExec.processListCommand, " " + getProcSettings());
             Log.d(CmdExec.processListCommand + " " + getProcSettings() + ">", cmdResult);
             String[] executedList = cmdResult.split("\n");
-            for (String line:executedList){
+            for (String line : executedList) {
                 if (String.valueOf(line.charAt(0)).equals(" ")) {
                     line = line.substring(1);
                 }
                 String user = line.split("[ ]+")[0].trim();
                 String ppid = line.split("[ ]+")[2].trim();
-                if(user.equals("USER")){continue;}
-                if(!users.contains(user)){
-                    users+=user+"|";
-                    int color = Color.argb(255, new Random().nextInt(256-56)+56, new Random().nextInt(256-56)+56, new Random().nextInt(256-56)+56);
+                if (user.equals("USER")) {
+                    continue;
+                }
+                if (!users.contains(user)) {
+                    users += user + "|";
+                    int color = Color.argb(255, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56);
                     user = "<font color=\"" + color + "\">" + user + "</font>";
                     userColors.add(color);
-                }else{
-                    for(int a = 0; a < users.split("[|]").length; a++){
-                        if(users.split("[|]")[a].equals(user)){
+                } else {
+                    for (int a = 0; a < users.split("[|]").length; a++) {
+                        if (users.split("[|]")[a].equals(user)) {
                             user = "<font color=\"" + userColors.get(a) + "\">" + user + "</font>";
                         }
                     }
                 }
-                if(ppid.equals("PPID")){continue;}
-                if(!ppids.contains(ppid+"|")){
-                    ppids+=ppid+"|";
-                    int color = Color.argb(255, new Random().nextInt(256-56)+56, new Random().nextInt(256-56)+56, new Random().nextInt(256-56)+56);
+                if (ppid.equals("PPID")) {
+                    continue;
+                }
+                if (!ppids.contains(ppid + "|")) {
+                    ppids += ppid + "|";
+                    int color = Color.argb(255, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56);
                     ppid = "<font color=\"" + color + "\">" + ppid + "</font>";
                     ppidColors.add(color);
-                }else{
-                    for(int a = 0; a < ppids.split("[|]").length; a++){
-                        if(ppids.split("[|]")[a].equals(ppid)){
+                } else {
+                    for (int a = 0; a < ppids.split("[|]").length; a++) {
+                        if (ppids.split("[|]")[a].equals(ppid)) {
                             ppid = "<font color=\"" + ppidColors.get(a) + "\">" + ppid + "</font>";
                         }
                     }
                 }
                 try {
-                    if(line.split("[ ]+").length==10) {
+                    if (line.split("[ ]+").length == 10) {
                         processes.add(new CProcess(user,
                                 Integer.parseInt(line.split("[ ]+")[1]),
                                 ppid,
@@ -297,25 +301,30 @@ public class MainActivity extends AppCompatActivity {
                                 line.substring(line.indexOf(line.split("[ ]+")[9]), line.length()),
                                 line.split("[ ]+")[0],
                                 Integer.valueOf(line.split("[ ]+")[2])));
-                    }else {
+                    } else {
                         processes.add(new CProcess(user,
                                 Integer.parseInt(line.split("[ ]+")[1]),
                                 ppid,
                                 Integer.parseInt(line.split("[ ]+")[3]),
                                 Integer.valueOf(line.split("[ ]+")[4]),
-                                "",line.split("[ ]+")[5],
+                                "", line.split("[ ]+")[5],
                                 line.split("[ ]+")[6], //+ " " + line.split("[ ]+")[7],
                                 line.substring(line.indexOf(line.split("[ ]+")[8]), line.length()),
                                 line.split("[ ]+")[0],
                                 Integer.valueOf(line.split("[ ]+")[2])));
                     }
-                    try{
-                    if(line.split("[ ]+")[8].contains(compareProcess)){
-                        isRunning = true;
-                    }}catch (Exception e){}
-                }catch (Exception e){e.printStackTrace();}
+                    try {
+                        if (line.split("[ ]+")[8].contains(compareProcess)) {
+                            isRunning = true;
+                        }
+                    } catch (Exception e) {
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-            if(compareProcess!=null && !isRunning){
+            Collections.reverse(processes);
+            if (compareProcess != null && !isRunning) {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -323,13 +332,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-            Collections.reverse(processes);
             processAdapterRec = new ProcessAdapter(getApplicationContext(), processes, new ProcessAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(CProcess item, final int i) {
                     pRecyclerView_onItemClick(getApplicationContext(), item, i);
                 }
             });
+
             return null;
         }
 
