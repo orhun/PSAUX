@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PS-Aux</string>
+    <string name="desc_long">Android arka plan servisi sonlandırıcı.</string>
     <string name="NAME">İsim:</string>
     <string name="USER">Kullanıcı:</string>
     <string name="autoKill">AutoKill</string>
@@ -22,4 +23,8 @@
     <string name="t_arg">Thread\'leri göster</string>
     <string name="unstableWarning">Bu ayarları değiştirmek uygulamanın stabil çalışmamasına neden olabilir.</string>
     <string name="x_arg">Zamanı göster</string>
+    <string name="open_source_licence">Lisans</string>
+    <string name="gnu_license">gplv3</string>
+    <string name="coded_by_k3">Coded By KeyLo99</string>
+    <string name="k3pwn_url">k3pwn.me</string>
 </resources>

@@ -5,4 +5,8 @@
     <color name="colorAccent">#2C3539</color>
     <color name="lime">#00FF00</color>
     <color name="gray1">#585858</color>
+    <color name="gray2">#101010</color>
+    <color name="gray3">#888888</color>
+    <color name="transparent_gray">#40b1b3c9</color>
+    <color name="transparent_lightGray">#90222222</color>
 </resources>
