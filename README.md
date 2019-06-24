@@ -1,5 +1,3 @@
-<img align="center" src='https://github.com/KeyLo99/PSAUX/blob/master/src/main/res/drawable/psaux1.png' width='300' height='300'/>
-
 # PSAUX  <a href="https://github.com/KeyLo99/PSAUX/releases"><img src="https://img.shields.io/github/release/KeyLo99/PSAUX.svg"/>
 </a>
 <a href="https://github.com/KeyLo99/PSAUX/issues"><img src="https://img.shields.io/github/issues/KeyLo99/PSAUX.svg"/></a>
