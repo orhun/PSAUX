@@ -26,7 +26,7 @@
 
 ## APK
 
-[Download APK](https://github.com/KeyLo99/APKs/raw/master/psaux-v1.5.apk)
+[Download APK](https://github.com/KeyLo99/PSAUX/raw/master/dist/psaux_2-0.apk)
 
 ## License
 
