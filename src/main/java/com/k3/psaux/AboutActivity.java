@@ -11,7 +11,7 @@ public class AboutActivity extends AppCompatActivity {
     // ** //
     private TextView txvProjectInfo;
     private void init(){
-        txvProjectInfo = (TextView)findViewById(R.id.txvProjectInfo);
+        txvProjectInfo = findViewById(R.id.txvProjectInfo);
         try {
             PackageManager manager = getPackageManager();
             PackageInfo info = manager.getPackageInfo(getPackageName(), 0);

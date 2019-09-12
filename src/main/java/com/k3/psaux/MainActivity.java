@@ -113,15 +113,19 @@ public class MainActivity extends AppCompatActivity {
     }
     private void showSplash(){
         try {
-            LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            final Dialog splashDialog = new Dialog(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+            LayoutInflater inflater = (LayoutInflater) getApplicationContext()
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            final Dialog splashDialog = new Dialog(this,
+                    android.R.style.Theme_Black_NoTitleBar_Fullscreen);
             splashDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
             splashDialog.setContentView(inflater.inflate(R.layout.splash_layout, null));
             splashDialog.setCancelable(false);
             final ImageView imgLogo = splashDialog.findViewById(R.id.imgLogo);
             final TextView txvLogo = splashDialog.findViewById(R.id.txvLogo);
-            final Animation zoomout = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoomout);
-            final Animation fade = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade);
+            final Animation zoomout = AnimationUtils.loadAnimation(getApplicationContext(),
+                    R.anim.zoomout);
+            final Animation fade = AnimationUtils.loadAnimation(getApplicationContext(),
+                    R.anim.fade);
             imgLogo.startAnimation(zoomout);
             final String cmds = "> PS AUX";
             for (int s = 0; s < cmds.toCharArray().length; s++) {
@@ -210,14 +214,16 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 ArrayList<CProcess> filteredList = new ArrayList<>();
                 for (CProcess row : processesTemp) {
-                    if (row.getPName().toLowerCase().contains(charString.toLowerCase()) || String.valueOf(row.getPid()).contains(charSequence)) {
+                    if (row.getPName().toLowerCase().contains(charString.toLowerCase()) ||
+                            String.valueOf(row.getPid()).contains(charSequence)) {
                         filteredList.add(row);
                     }
                 }
                 processesFiltered = filteredList;
             }
             processes = processesFiltered;
-            pRecyclerView.setAdapter(new ProcessAdapter(getApplicationContext(), processesFiltered, new ProcessAdapter.OnItemClickListener() {
+            pRecyclerView.setAdapter(new ProcessAdapter(getApplicationContext(), processesFiltered,
+                    new ProcessAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(CProcess item, final int i) {
                     pRecyclerView_onItemClick(getApplicationContext(), item, i);
@@ -249,7 +255,8 @@ public class MainActivity extends AppCompatActivity {
         }
         @Override
         protected Void doInBackground(Void... voids) {
-            String cmdResult = new CmdExec().executeCommand(CmdExec.processListCommand, " " + getProcSettings());
+            String cmdResult = new CmdExec().executeCommand(CmdExec.processListCommand, " "
+                    + getProcSettings());
             Log.d(CmdExec.processListCommand + " " + getProcSettings() + ">", cmdResult);
             String[] executedList = cmdResult.split("\n");
             for (String line : executedList) {
@@ -263,7 +270,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (!users.contains(user)) {
                     users += user + "|";
-                    int color = Color.argb(255, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56);
+                    int color = Color.argb(255, new Random().nextInt(256 - 56)
+                            + 56, new Random().nextInt(256 - 56) + 56,
+                            new Random().nextInt(256 - 56) + 56);
                     user = "<font color=\"" + color + "\">" + user + "</font>";
                     userColors.add(color);
                 } else {
@@ -278,7 +287,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (!ppids.contains(ppid + "|")) {
                     ppids += ppid + "|";
-                    int color = Color.argb(255, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56, new Random().nextInt(256 - 56) + 56);
+                    int color = Color.argb(255, new Random().nextInt(256 - 56)
+                            + 56, new Random().nextInt(256 - 56) + 56,
+                            new Random().nextInt(256 - 56) + 56);
                     ppid = "<font color=\"" + color + "\">" + ppid + "</font>";
                     ppidColors.add(color);
                 } else {
@@ -298,7 +309,8 @@ public class MainActivity extends AppCompatActivity {
                                 line.split("[ ]+")[5],
                                 line.split("[ ]+")[6],
                                 line.split("[ ]+")[7], //+ " " + line.split("[ ]+")[7],
-                                line.substring(line.indexOf(line.split("[ ]+")[9]), line.length()),
+                                line.substring(line.indexOf(line.split("[ ]+")[9]),
+                                        line.length()),
                                 line.split("[ ]+")[0],
                                 Integer.valueOf(line.split("[ ]+")[2])));
                     } else {
@@ -309,7 +321,8 @@ public class MainActivity extends AppCompatActivity {
                                 Integer.valueOf(line.split("[ ]+")[4]),
                                 "", line.split("[ ]+")[5],
                                 line.split("[ ]+")[6], //+ " " + line.split("[ ]+")[7],
-                                line.substring(line.indexOf(line.split("[ ]+")[8]), line.length()),
+                                line.substring(line.indexOf(line.split("[ ]+")[8]),
+                                        line.length()),
                                 line.split("[ ]+")[0],
                                 Integer.valueOf(line.split("[ ]+")[2])));
                     }
@@ -328,7 +341,8 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(getApplicationContext(), getString(R.string.processKilled) + compareProcess, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.processKilled) +
+                                compareProcess, Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -345,7 +359,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             try {
-                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+                RecyclerView.LayoutManager mLayoutManager =
+                        new LinearLayoutManager(getApplicationContext());
                 pRecyclerView.setLayoutManager(mLayoutManager);
                 pRecyclerView.setItemAnimator(new DefaultItemAnimator());
                 pRecyclerView.setAdapter(processAdapterRec);
@@ -355,13 +370,15 @@ public class MainActivity extends AppCompatActivity {
     }
     private void pRecyclerView_onItemClick(Context context, CProcess item, final int i){
         final String[] options = new String[]{context.getString(R.string.killProcess), context.getString(R.string.processInfo)};
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, android.R.style.Theme_DeviceDefault_Dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this,
+                android.R.style.Theme_DeviceDefault_Dialog);
         builder.setTitle(processes.get(i).getPName());
         builder.setItems(options, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if(options[which].equals(options[0])){
-                    new CmdExec().killProc(getApplicationContext(), processes.get(i).getPid(), processes.get(i).getPName());
+                    new CmdExec().killProc(getApplicationContext(), processes.get(i).getPid(),
+                            processes.get(i).getPName());
                     loadPList(processes.get(i).getPName());
                 }else if(options[which].equals(options[1])){
                     showProcessInfo(i);
@@ -371,15 +388,20 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
     private void showProcessInfo(final int i){
-        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final Dialog pDialog = new Dialog(this);
         pDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         pDialog.setContentView(inflater.inflate(R.layout.process_info_layout, null));
         ((TextView)(pDialog.findViewById(R.id.txvPUser))).setText(processes.get(i).getUSERSALT());
-        ((TextView)(pDialog.findViewById(R.id.txvPPid))).setText(String.valueOf(processes.get(i).getPid()));
-        ((TextView)(pDialog.findViewById(R.id.txvPPpid))).setText(String.valueOf(processes.get(i).getPPIDSALT()));
-        ((TextView)(pDialog.findViewById(R.id.txvPVsize))).setText(String.valueOf(processes.get(i).getVSIZE()));
-        ((TextView)(pDialog.findViewById(R.id.txvPRss))).setText(String.valueOf(processes.get(i).getRSS()));
+        ((TextView)(pDialog.findViewById(R.id.txvPPid))).setText(String.valueOf(processes.get(i)
+                .getPid()));
+        ((TextView)(pDialog.findViewById(R.id.txvPPpid))).setText(String.valueOf(processes.get(i)
+                .getPPIDSALT()));
+        ((TextView)(pDialog.findViewById(R.id.txvPVsize))).setText(String.valueOf(processes.get(i)
+                .getVSIZE()));
+        ((TextView)(pDialog.findViewById(R.id.txvPRss))).setText(String.valueOf(processes.get(i)
+                .getRSS()));
         ((TextView)(pDialog.findViewById(R.id.txvPWchan))).setText(processes.get(i).getWCHAN());
         ((TextView)(pDialog.findViewById(R.id.txvPPc))).setText(processes.get(i).getPC());
         ((TextView)(pDialog.findViewById(R.id.txvPName))).setText(processes.get(i).getPName());
@@ -395,7 +417,8 @@ public class MainActivity extends AppCompatActivity {
         ((Button)(pDialog.findViewById(R.id.btnKillProcess))).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new CmdExec().killProc(getApplicationContext(), processes.get(i).getPid(), processes.get(i).getPName());
+                new CmdExec().killProc(getApplicationContext(), processes.get(i).getPid(),
+                        processes.get(i).getPName());
                 pDialog.cancel();
                 loadPList(processes.get(i).getPName());
             }
@@ -403,9 +426,11 @@ public class MainActivity extends AppCompatActivity {
         ((Button)(pDialog.findViewById(R.id.btnSetService))).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateDBInfo(getApplicationContext(), getDBInfo(getApplicationContext())+" | "+processes.get(i).getPName());
+                updateDBInfo(getApplicationContext(), getDBInfo(getApplicationContext())+
+                        " | "+processes.get(i).getPName());
                 pDialog.cancel();
-                Toast.makeText(MainActivity.this, getString(R.string.autoKillSet) + processes.get(i).getPName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, getString(R.string.autoKillSet) +
+                        processes.get(i).getPName(), Toast.LENGTH_SHORT).show();
             }
         });
         pDialog.show();
@@ -416,7 +441,8 @@ public class MainActivity extends AppCompatActivity {
             ProcDB procDB = new ProcDB(context);
             SQLiteDatabase db = procDB.getWritableDatabase();
             String[] column = {procDB.dataName};
-            Cursor read = db.query(procDB.tableName, column, null, null, null, null, null);
+            Cursor read = db.query(procDB.tableName, column, null, null,
+                    null, null, null);
             while (read.moveToNext()) {
                 info = read.getString(read.getColumnIndex(procDB.dataName));
             }
@@ -446,7 +472,8 @@ public class MainActivity extends AppCompatActivity {
     }
     private void showSettings(){
         final String[] options = new String[]{getString(R.string.psCommandArgs), getString(R.string.autoKillSettings)};
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, android.R.style.Theme_DeviceDefault_Dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this,
+                android.R.style.Theme_DeviceDefault_Dialog);
         builder.setTitle(getString(R.string.settings));
         builder.setItems(options, new DialogInterface.OnClickListener() {
             @Override
@@ -461,7 +488,8 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
     private void showSettings_PSCommand(){
-        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final Dialog pDialog = new Dialog(this);
         pDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         pDialog.setContentView(inflater.inflate(R.layout.procargs_settings_layout, null));
@@ -512,34 +540,41 @@ public class MainActivity extends AppCompatActivity {
         (pDialog.findViewById(R.id.btnSettingsInfo)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Snackbar.make(pDialog.findViewById(R.id.llProcArgsSettings), getString(R.string.unstableWarning), Snackbar.LENGTH_LONG).show();
+               Snackbar.make(pDialog.findViewById(R.id.llProcArgsSettings),
+                       getString(R.string.unstableWarning), Snackbar.LENGTH_LONG).show();
             }
         });
         pDialog.show();
     }
     private void changeSettings(String args, Boolean b){
         if(b){
-            if(!getDBInfo(getApplicationContext()).contains(args) && getDBInfo(getApplicationContext()).contains("&")){
-                updateDBInfo(getApplicationContext(), args + " " + getDBInfo(getApplicationContext()));
+            if(!getDBInfo(getApplicationContext()).contains(args) &&
+                    getDBInfo(getApplicationContext()).contains("&")){
+                updateDBInfo(getApplicationContext(), args + " " +
+                        getDBInfo(getApplicationContext()));
             }else{
                 getProcSettings();
             }
         }else{
-            if(getDBInfo(getApplicationContext()).contains(args) && getDBInfo(getApplicationContext()).contains("&")){
-                updateDBInfo(getApplicationContext(), " " + getDBInfo(getApplicationContext()).replace(args, ""));
+            if(getDBInfo(getApplicationContext()).contains(args) &&
+                    getDBInfo(getApplicationContext()).contains("&")){
+                updateDBInfo(getApplicationContext(), " " +
+                        getDBInfo(getApplicationContext()).replace(args, ""));
             }
         }
     }
     private void showSettings_autoKill(){
         startPService();
-        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final Dialog pDialog = new Dialog(this);
         pDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         pDialog.setContentView(inflater.inflate(R.layout.autokill_settings_layout, null));
         ListView lstSettings = (ListView) pDialog.findViewById(R.id.lstSettings);
         final ArrayList<String> procNames = new ArrayList<>();
         try{
-            String[] autoKillLst = getDBInfo(getApplicationContext()).split("[&]")[1].split("[|]");
+            String[] autoKillLst = getDBInfo(getApplicationContext()).split("[&]")[1]
+                    .split("[|]");
             for(int i = 0; i < autoKillLst.length; i++){
                 String procName = autoKillLst[i].trim();
                 if(!procName.equals("") && !procName.equals(" ") && procName.length() > 2)
@@ -551,7 +586,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     pDialog.cancel();
-                    updateDBInfo(getApplicationContext(), getDBInfo(getApplicationContext()).replaceAll("\\|[ ]*"+procNames.get(i)+"[ ]*", ""));
+                    updateDBInfo(getApplicationContext(), getDBInfo(getApplicationContext())
+                            .replaceAll("\\|[ ]*"+procNames.get(i)+"[ ]*", ""));
                     showSettings_autoKill();
                 }
             });

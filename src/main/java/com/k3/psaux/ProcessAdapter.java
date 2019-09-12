@@ -36,7 +36,8 @@ public class ProcessAdapter extends RecyclerView.Adapter<ProcessAdapter.ViewHold
             });
         }
     }
-    public ProcessAdapter(Context context, ArrayList<CProcess> processes, OnItemClickListener onItemClickListener) {
+    public ProcessAdapter(Context context, ArrayList<CProcess> processes,
+                          OnItemClickListener onItemClickListener) {
         this.context = context;
         this.processes = processes;
         this.onItemClickListener = onItemClickListener;
@@ -51,11 +52,15 @@ public class ProcessAdapter extends RecyclerView.Adapter<ProcessAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         String user = processes.get(position).getUser();
         String ppid = String.valueOf(processes.get(position).getPPID());
-        String pname = "<b><font color=\"" + ContextCompat.getColor(context, R.color.lime) + "\">" + processes.get(position).getPName() + "</font></b>";
+        String pname = "<b><font color=\"" + ContextCompat.getColor(context, R.color.lime) + "\">"
+                + processes.get(position).getPName() + "</font></b>";
         if (!processes.get(position).getCPU().equals("")) {
-            pname = "<b><font color=\"" + ContextCompat.getColor(context, R.color.lime) + "\">" + processes.get(position).getPName() + " ~%" + processes.get(position).getCPU() + "</font></b>";
+            pname = "<b><font color=\"" + ContextCompat.getColor(context, R.color.lime) + "\">"
+                    + processes.get(position).getPName() + " ~%" + processes.get(position).getCPU()
+                    + "</font></b>";
         }
-        String pline = user + "  [" + processes.get(position).getPid() + "]  > <small>" + ppid + "</small>  " + pname;
+        String pline = user + "  [" + processes.get(position).getPid() + "]  > <small>" + ppid
+                + "</small>  " + pname;
         holder.txvProcess.setText(Html.fromHtml(pline));
         holder.bind(processes.get(position), position, onItemClickListener);
     }
