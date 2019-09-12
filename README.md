@@ -10,7 +10,7 @@
  
  [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
-     height="80">](https://play.google.com/store/apps/details?id=com.tht.psaux)
+     height="80">](https://play.google.com/store/apps/details?id=com.k3.psaux)
      
 <img align="center" src='https://github.com/orhun/PSAUX/blob/master/src/main/res/drawable/example_phone.png' width='335' height='679'/>
 
