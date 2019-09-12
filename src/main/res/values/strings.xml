@@ -24,6 +24,6 @@
     <string name="copied">Copied.</string>
     <string name="open_source_licence">Licence</string>
     <string name="gnu_license">gplv3</string>
-    <string name="coded_by_k3">Coded By KeyLo99</string>
-    <string name="k3pwn_url">k3pwn.me</string>
+    <string name="coded_by_k3">@orhun</string>
+    <string name="k3pwn_url">~</string>
 </resources>
