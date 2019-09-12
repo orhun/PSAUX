@@ -22,6 +22,10 @@
 * App Widget (for starting autokill service)
 * Optional `ps` command arguments.
 
+## APK
+	
+[Download APK](https://github.com/orhun/PSAUX/raw/master/dist/psaux_2-2.apk)
+
 ## License
 
 GNU General Public License v3. (see [gpl](https://www.gnu.org/licenses/gpl.txt))
