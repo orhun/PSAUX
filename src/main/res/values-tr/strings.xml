@@ -25,6 +25,5 @@
     <string name="x_arg">Zamanı göster</string>
     <string name="open_source_licence">Lisans</string>
     <string name="gnu_license">gplv3</string>
-    <string name="coded_by_k3">@orhun</string>
-    <string name="k3pwn_url">~</string>
+    <string name="credit">github.com/orhun</string>
 </resources>

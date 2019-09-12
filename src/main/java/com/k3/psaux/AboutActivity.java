@@ -1,21 +1,16 @@
 package com.k3.psaux;
 
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
-    private static String version = "1.0",
-            k3pwn = "http://www.k3pwn.me";
+    private static String version = "1.0";
     // ** //
-    private TextView txvK3pwn, txvProjectInfo;
+    private TextView txvProjectInfo;
     private void init(){
-        txvK3pwn = (TextView) findViewById(R.id.txvK3pwn);
         txvProjectInfo = (TextView)findViewById(R.id.txvProjectInfo);
         try {
             PackageManager manager = getPackageManager();
@@ -25,12 +20,6 @@ public class AboutActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         txvProjectInfo.setText(getString(R.string.app_name) + " v" + version);
-        txvK3pwn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openPage(k3pwn);
-            }
-        });
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +36,6 @@ public class AboutActivity extends AppCompatActivity {
         }
         try{
             getActionBar().hide();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-    private void openPage(String url){
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
         }catch (Exception e){
             e.printStackTrace();
         }
