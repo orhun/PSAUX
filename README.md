@@ -24,8 +24,8 @@
 
 ## License
 
-GNU General Public License v3. (see [gpl](https://www.gnu.org/licenses/gpl.txt))
+GNU General Public License ([v3](https://www.gnu.org/licenses/gpl.txt))
 
-## Credit
+## Copyright
 
-Copyright (C) 2019 by orhun https://www.github.com/orhun
+Copyright (c) 2019-2020, [orhun](https://www.github.com/orhun)
