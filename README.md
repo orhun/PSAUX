@@ -10,7 +10,7 @@
  
  [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
-     height="80">](https://play.google.com/store/apps/details?id=com.tht.psaux)
+     height="80">](https://play.google.com/store/apps/details?id=com.k3.psaux)
      
 <img align="center" src='https://github.com/orhun/PSAUX/blob/master/src/main/res/drawable/example_phone.png' width='335' height='679'/>
 
@@ -21,6 +21,10 @@
 * AutoKill (Terminate selected background services constantly)
 * App Widget (for starting autokill service)
 * Optional `ps` command arguments.
+
+## APK
+	
+[Download APK](https://github.com/orhun/PSAUX/raw/master/dist/psaux_2-2.apk)
 
 ## License
 
